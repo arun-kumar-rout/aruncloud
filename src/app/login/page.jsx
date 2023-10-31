@@ -20,7 +20,6 @@ const Login = () => {
     }
     if(session.status ==="unauthenticated"){
         return <div onClick={()=>signIn("google")} >
-            <Image src="/assets/images/google.png" alt='google' width={200} height={40}/>
             <GoogleButton/>
             </div>
     }

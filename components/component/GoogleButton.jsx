@@ -1,7 +1,9 @@
+import Image from "next/image";
+
 const GoogleButton = () => {
     return ( 
-        <div className="flex justify-center items-center w-full h-full">
-            <button className="bg-blue-500 p-2 rounded-xl px-3 text-white">Login With Google</button>
+        <div className="flex justify-center items-center w-full h-full ">
+            <Image className="rounded-xl" src="/assets/images/google.png" alt="google" width={200} height={40}/>
         </div>
      );
 }
