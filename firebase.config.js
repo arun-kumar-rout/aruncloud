@@ -2,7 +2,7 @@ import { initializeApp, getApp, getApps } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD9CnMBGPdXnMF8Kj_RFRT3VTvNxw79dlU",
+  apiKey: process.env.FIREBASE_API_KEY,
   authDomain: "aruncloud-400407.firebaseapp.com",
   projectId: "aruncloud-400407",
   storageBucket: "aruncloud-400407.appspot.com",
@@ -13,3 +13,4 @@ const firebaseConfig = {
 
 // const analytics = getAnalytics(app);
 const app = getApps.length > 0 ? getApp : initializeApp(firebaseConfig);
+export default app;

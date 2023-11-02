@@ -2,6 +2,8 @@
 import Image from "next/image";
 import list from "../../data/menu";
 import { useState } from "react";
+import CreateFolderModal from "@@/Folder/CreateFolderModal";
+
 
 const SideNavbar = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -71,7 +73,7 @@ const SideNavbar = () => {
             </li>
           ))}
         </ul>
-        {/* <CreateFolderModal /> */}
+        <CreateFolderModal />
       </div>
     </div>
   );
