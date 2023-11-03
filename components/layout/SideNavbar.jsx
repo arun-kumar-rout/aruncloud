@@ -1,5 +1,6 @@
 "use client"
 import Image from "next/image";
+import Link from "next/link";
 import list from "../../data/menu";
 import { useState } from "react";
 import CreateFolderModal from "@@/Folder/CreateFolderModal";
@@ -10,7 +11,7 @@ const SideNavbar = () => {
   return (
     <div>
       <div className="w-[200px] h-screen sticky top-0 left-0  shadow-blue-600 shadow-lg z-10 p-5 text-center bg-white">
-        <Image src="/assets/images/logo.png" alt="logo" width={150} height={60} />
+        <Link href="/"><Image src="/assets/images/logo.png" alt="logo" width={150} height={60} /></Link>
         <button className="flex gap-2 items-center bg-blue-500 p-3 text-white rounded-md hover:scale-105 transition-all mt-5 w-full">
           Add new File
           <svg

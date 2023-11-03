@@ -2,13 +2,13 @@ import React, { useContext, useEffect } from "react";
 import { ShowToastContext } from "../../context/ShowToastContext";
 
 const Toast = ({msg}) => {
-  // crearing toast message after 3 sec
-  const {toastMsg, setToastMsg} = useContext(ShowToastContext);
+  // clearing toast message after 3 sec
+  const {showToastMsg, setShowToastMsg} = useContext(ShowToastContext);
   useEffect(() => {
     setInterval(() => {
-      setToastMsg(null)
+      setShowToastMsg(null)
     }, 3000)
-  },[toastMsg, setToastMsg])
+  },[showToastMsg, setShowToastMsg])
   return (
     <div className="toast toast-top toast-end">
       <div className="alert alert-success">

@@ -4,13 +4,15 @@ import { useSession } from "next-auth/react";
 import app from "../../firebase.config";
 import {doc, getFirestore, setDoc} from 'firebase/firestore';
 import { ShowToastContext } from "../../context/ShowToastContext";
+import Toast from "@@/ToastMsg/Toast";
+
 
 const CreateFolderModal = () => {
     const [folderName, setFolderName] = useState(null);
     const {data:session} = useSession();
     
     // toast message setup
-    const {toastMsg, setToastMsg} = useContext(ShowToastContext);
+   const {showToastMsg, setShowToastMsg} = useContext(ShowToastContext);
     
     const docId = Date.now().toString();
 
@@ -23,7 +25,7 @@ const CreateFolderModal = () => {
             id : docId,
             createdBy:session.user.email
         })
-        setToastMsg(`Folder ${folderName}, created!`)
+        setShowToastMsg(`Folder ${folderName}, created!`)
     }
 
     
